@@ -1,0 +1,55 @@
+name: englysysh
+description: "A new Flutter project."
+publish_to: 'none' 
+version: 1.0.0+1
+
+environment:
+  sdk: ^3.12.2
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+  flutter_svg: ^2.2.0
+  google_sign_in: ^7.2.0
+  image_picker: ^1.2.3
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+
+  flutter_lints: ^6.0.0
+
+
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/home.png
+    - assets/chat.png
+    - assets/book.png
+    - assets/arrow.png
+    - assets/balakyn.png
+    - assets/day.png
+    - assets/haker.png
+    - assets/nichnasova.png
+    - assets/options.png
+    - assets/orator.png
+    - assets/papuga.png
+    - assets/praktuck.png
+    - assets/rannyaptashka.png
+    - assets/shef.png
+    - assets/slovoplit.png
+    - assets/sluhach.png
+    - assets/timespeak.png
+    - assets/Trend.png
+    - assets/vidminnuk.png
+    - assets/vydari.png
+    - assets/wbook.png
+    - assets/screen_home.png
+    - assets/screen_stats.png
+    - assets/screen_dict.png
+    - assets/screen_settings.png
+
+ 
+  
