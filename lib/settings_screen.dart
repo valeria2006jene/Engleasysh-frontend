@@ -55,7 +55,7 @@ class _SettingsScreenState extends State<SettingsScreen> {
     String? subtitle,
     required IconData icon,
     required bool value,
-    required ValueChanged<bool> onChanged,
+    required ValueChanged<bool>? onChanged, // Зробили nullable, щоб мати змогу блокувати світч
     bool isFocus = false,
   }) {
     return ListTile(
@@ -164,6 +164,28 @@ class _SettingsScreenState extends State<SettingsScreen> {
                       ),
                     ],
                   ),
+                ),
+              ],
+            ),
+
+            // ДОДАНО НОВИЙ РОЗДІЛ: Режими роботи
+            _buildSectionHeader("Режими роботи"),
+            _buildSettingsCard(
+              children: [
+                _buildSwitchTile(
+                  title: "Звичайний режим",
+                  subtitle: "Використовується за замовчуванням",
+                  icon: Icons.speaker_phone,
+                  value: true, // Завжди увімкнений
+                  onChanged: (_) {}, // Пуста функція, тому світч неможливо перемкнути, але візуально він активний
+                ),
+                const Divider(height: 1, indent: 20, endIndent: 20),
+                _buildSwitchTile(
+                  title: "Режим у навушниках",
+                  subtitle: "Оптимізація для гарнітури ",
+                  icon: Icons.headphones,
+                  value: false, // Вимкнений
+                  onChanged: null, // null робить світч візуально заблокованим (сірим)
                 ),
               ],
             ),
